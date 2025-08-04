@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Page with Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+    header, section, footer {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #aaa;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: auto;
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTML5 Advanced Content and Forms</h1>
+    <p>This page demonstrates advanced HTML5 features including lists, tables, embedded media, and a fully validated form.</p>
+  </header>
+
+  <section>
+    <h2>Popular Programming Languages</h2>
+
+    <h3>Ordered List (Top 3 Languages)</h3>
+    <ol>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Java</li>
+    </ol>
+
+    <h3>Unordered List (Web Development Tools)</h3>
+    <ul>
+      <li>Visual Studio Code</li>
+      <li>Chrome DevTools</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Web Development Course Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Topic</th>
+          <th>Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>HTML & CSS</td>
+          <td>VS Code</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>JavaScript Basics</td>
+          <td>Chrome DevTools</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Forms and Validation</td>
+          <td>Browser</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Media Gallery</h2>
+    <figure>
+      <img src="/storage/emulated/0/DCIM/DFW/LoveImage_20241021061703.jpg" alt="Sample Image" width="400">
+      <figcaption>Sample Image: HTML5 in Action</figcaption>
+    </figure>
+
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <video width="400" controls>
+      <source src="sample-video.mp4" type="/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Media/WhatsApp Business Video/VID-20250801-WA0014.mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h2>Contact & Registration Form</h2>
+    <form action="#" method="post" autocomplete="on">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required minlength="2" placeholder="e.g., John" />
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required minlength="2" placeholder="e.g., Doe" />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="e.g., john@example.com" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,}$" placeholder="Min 5 characters, letters/numbers only" />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6" placeholder="Min 6 characters" />
+
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm" required minlength="6" />
+
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="student">Student</option>
+          <option value="developer">Developer</option>
+          <option value="teacher">Teacher</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label>
+          <input type="checkbox" name="subscribe" checked readonly />
+          Subscribe to newsletter (auto-checked & read-only)
+        </label>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color" />
+        
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" minlength="10" placeholder="Tell us a bit about yourself..."></textarea>
+      </fieldset>
+
+      <input type="submit" value="Register Now" />
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Web Skills Academy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
